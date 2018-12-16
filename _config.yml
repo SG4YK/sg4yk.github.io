@@ -19,8 +19,9 @@ footer:
 # Author 配置博主信息
 author: 'SG4YK'
 nickname: ''
-bio: 'オタクです|
-      Contact: sg4yk@outlook.com'
+bio: |
+ 'オタクです'
+ 'Contact: sg4yk@outlook.com'
 avatar: '/assets/img/profile.png'
 
 # Search

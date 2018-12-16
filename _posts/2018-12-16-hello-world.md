@@ -5,6 +5,6 @@ subtitle: 'The first post'
 date: 2018-12-16
 categories: 'Uncategorized'
 tags: 'test'
-cover: 'https://sg4yk.github.io/assets/img/JuniperPhoton  2018-06-17 12-00-00.jpg'
+cover: '/assets/img/JuniperPhoton  2018-06-17 12-00-00.jpg'
 ---
 Hello World!

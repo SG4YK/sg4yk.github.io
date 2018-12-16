@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'SG4YK BLOG' 
-description: 'OTAKU DESU'
-keyword: 'TEST'
+title: 'SG4YK''s Blog' 
+description: 'SG4YK''s Blog'
+keyword: ''
 url: 'sg4yk.github.io' # your host
 
 # if you don't need baseurl, you should leave this value blank.
@@ -14,12 +14,12 @@ nav:
 
 # Footer
 footer:
-  since: 2017
+  since: 2018
 
 # Author 配置博主信息
 author: 'SG4YK'
-nickname: 'N/A'
-bio: 'Student,OTAKU'
+nickname: ''
+bio: 'オタクです'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -30,14 +30,14 @@ nightMode: false
 
 # Comments 评论功能
 comments:
-  disqus: false
-  disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+  disqus: true
+  disqus_url: 'https://sg4yk.disqus.com/embed.js'
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
 
 # Share
-social-share: true
+social-share: false
 social-share-items: ['twitter']
 
 # theme color 主题皮肤

@@ -3,7 +3,7 @@ layout: post
 title: 'Hello World!'
 subtitle: 'The first post'
 date: 2018-12-16
-categories: 
+categories: Uncategorized
 tags: 
 ---
 Hello World!

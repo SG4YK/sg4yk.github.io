@@ -19,7 +19,7 @@ footer:
 # Author 配置博主信息
 author: 'SG4YK'
 nickname: ''
-bio: 'オタクです'
+bio: 'オタクです\nContact: sg4yk@outlook.com'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -50,7 +50,6 @@ postPatterns: 'circuitBoard'
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
   github: '//github.com/sg4yk'
-  email: 'sg4yk@outlook.com'
 
 # Tags 设置标签
 recommend-tags: false # whether or not display recommend-tags on the sidebar

@@ -11,8 +11,9 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
-  about me: '/about.html'
   friend links: '/friend_links.html'
+  about me: '/about.html'
+
 
 # Footer
 footer:

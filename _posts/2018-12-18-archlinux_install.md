@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ArchLinux安装记录'
+title: 'ArchLinux安装笔记'
 subtitle: '更新中'
 date: 2018-12-18
 categories: 'Tech'

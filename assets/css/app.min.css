@@ -273,13 +273,16 @@ a {
       width: 100%; }
   .author-card .author-name {
     width: 100%;
+    font-family: 'SourceSansPro','SourceHanSans';
     font-size: 16px;
     color: #4E4E4E;
     font-weight: 500;
     margin: 12px 0 6px; }
   .author-card .bio p {
     font-size: 14px;
-    line-height: 20px; }
+    font-family: 'SourceSansPro','SourceHanSans';
+    line-height: 20px;
+    text-align: center; }
   .author-card .sns-links {
     margin-top: 14px;
     cursor: default; }
@@ -332,7 +335,7 @@ a {
       .author-card .sns-links li .icon-vk:hover {
         color: #5181b8; }
 
-.article-item .post-meta .post-tag, .tags-card .tag, .tags-content .tag {
+.article-item .post-meta .post-tag, .tags-card .tag, .tags-content .tag{
   display: inline-block;
   width: auto;
   height: 22px;
@@ -1053,6 +1056,14 @@ a {
   margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(100, 110, 120, 0.53); }
+
+a.hover {
+  text-decoration: none;
+}
+
+a.hover:hover{
+  text-decoration: underline;
+}
 
 @media screen and (max-width: 376px) {
   .home-banner h2 {

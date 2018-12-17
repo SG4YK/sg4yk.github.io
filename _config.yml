@@ -12,6 +12,7 @@ nav:
   home: '/'
   tags: '/tags.html'
   about me: '/about.html'
+  friend links: '/friend_links.html'
 
 # Footer
 footer:
@@ -20,7 +21,7 @@ footer:
 # Author 配置博主信息
 author: 'SG4YK'
 nickname: ''
-bio: 'ERO IS JUSTICE!'
+bio: 'ERO IS JUSTICE<br>エロ即是正义'
 avatar: '/assets/img/profile.png'
 
 # Search

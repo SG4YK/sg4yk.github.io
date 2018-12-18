@@ -11,6 +11,7 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
+  RSS: '/rss.xml'
   friend links: '/friend_links.html'
   about me: '/about.html'
 
@@ -71,7 +72,7 @@ kramdown:
   input: GFM
 
 # RSS
-RSS: false
+RSS: true
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35

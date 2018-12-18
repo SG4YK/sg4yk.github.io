@@ -5,6 +5,7 @@ subtitle: '更新中'
 date: 2018-12-18
 categories: 'Tech'
 tags: 'Linux'
+cover: 'https://pbs.twimg.com/media/DKucDZrVAAAPMDE.jpg:large'
 ---
 NOTE:本文适用于物理机安装，虚拟机安装请勿直接照搬
 
@@ -41,3 +42,5 @@ swap         #交换分区      8GB
    
      
 *...未完待续*
+
+>![](https://pbs.twimg.com/media/DKucDZrVAAAPMDE.jpg:large) [illust: liduke](https://twitter.com/lidukelaya/status/912995296048590848) 

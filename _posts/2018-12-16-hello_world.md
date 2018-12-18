@@ -5,6 +5,10 @@ subtitle: 'The first post'
 date: 2018-12-16
 categories: 'Uncategorized'
 tags: 
-cover: '/assets/img/JuniperPhoton  2018-06-17 12-00-00.jpg'
+cover: 'https://i.pximg.net/img-original/img/2018/06/01/12/33/52/69020042_p0.jpg'
 ---
-Hello World!
+Hello World!  
+
+>![](https://i.pximg.net/img-original/img/2018/06/01/12/33/52/69020042_p0.jpg) 
+[illust: ひみつ](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=69020042) 
+

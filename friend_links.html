@@ -1,6 +1,7 @@
 ---
 title: Friend Links
 layout: default
+
 ---
 
 {% include header.html %}
@@ -18,14 +19,13 @@ layout: default
                 </p>
             </div>
         </li>
-        <p style="text-align:center;font-size:18px;font-family: 'SourceSansPro','SourceHanSans';font-weight: lighter;" >
-            Leave your adress if you want to exchange friend links.
-        <section class="comment" style="margin-left:0">
-                <div id="disqus_thread"></div>
-        </section>
     </ul>
+    {% if site.comments.disqus %}
+    <section>
+        <div class="post-footer-item" id="disqus_thread"></div>
+    </section>
+    {% endif %}
 </main>
-
 {% if site.comments.disqus %}
 <script>
   /**
@@ -45,5 +45,8 @@ layout: default
   })();
 </script>
 {% endif %}
+
+
+
 
 {% include footer.html %}

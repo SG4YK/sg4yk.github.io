@@ -1069,6 +1069,11 @@ a.hover:hover{
   transition: .2s;
 }
 
+.about-comment {
+  margin: 1em;
+  width: auto; 
+}
+
 @media screen and (max-width: 376px) {
   .home-banner h2 {
     font-size: 26px;

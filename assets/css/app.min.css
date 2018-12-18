@@ -149,9 +149,9 @@ a {
   .home-banner h2 {
     padding-top: 190px;
     line-height: 38px;
-    font-size: 42px;
+    font-size: 60px;
     font-family: 'SourceSansPro-ExtraLight','SourceHanSans','Arial', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 2px;
     line-height: 52px; }
   .home-banner h3 {
@@ -733,7 +733,9 @@ a {
   height: 300px;
   text-align: center; }
   .tags-banner h2 {
-    font-size: 36px;
+    font-size: 60px;
+    font-family: "SourceSansPro-ExtraLight";
+    font-weight: normal; 
     line-height: 300px; }
 
 .tags-content {

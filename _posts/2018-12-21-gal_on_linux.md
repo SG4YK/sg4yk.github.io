@@ -9,7 +9,7 @@ cover: '/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg'
 ---
 众所周知由于Windows上蛋疼的编码问题，大多数情况下我们运行Galgame都需要使用ntleas或者LocaleEmulator等工具进行转区（不仅如此，有些情况下我打开别人给我的包含中文字符的txt文本都需要转区）。  
 当我投入了ArchLinux的怀抱以后，即使能用wine来运行Windows应用，但转区就成为了一个头痛的问题。对于64位应用，即使比较麻烦，但还是可以通过手动打开ntleasWin.exe来转区；32位应用你只能用LocaleEmulator进行转区，然而LE转区是要通过Windows的右键菜单来启动对应的程序的，显然这行不通。  
-<del style="float:left;color:#828282;" >为了搓个屌就要重启的麻烦事我是忍不了的</del>于是就有了下面的教程。（**不是用虚拟机啊！**
+<del style="color:#828282;" >为了搓个屌就要重启的麻烦事我是忍不了的，</del>于是就有了下面的教程。（**不是用虚拟机啊！**
 
 ## 1 安装wine
 在控制台执行
@@ -73,7 +73,9 @@ $ WINEARCH=win32 WINEPREFIX=~/.wine32 wineboot -u
 ~~~bash
 $ WINEPREFIX="~/.wine32" LANG="ja_JP" wine someProgram.exe
 ~~~
-如果你你的Gal能运行，但是部分字符显示不正常，通常的原因是wine缺少字体文件。此问题就不在本文的讨论范围了。
+最後，你只需要制作一个快捷方式，就可以方便地<del style="color:#828282;" >开冲</del>启动你的Galgame。  
+>如果你的Gal能运行，但是部分字符显示不正常，通常的原因是wine缺少字体文件。此问题就不在本文的讨论范围了。
+
 # 4 后记
 没什么好记的，**祝大家身体健康**（逃
 

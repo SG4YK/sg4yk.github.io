@@ -5,7 +5,7 @@ subtitle: '更新中'
 date: 2018-12-18
 categories: 'Tech'
 tags: 'Linux'
-cover: 'https://pbs.twimg.com/media/DKucDZrVAAAPMDE.jpg:large'
+cover: '/assets/img/post/2018/12/DKucDZrVAAAPMDE.jpg'
 ---
 NOTE:本文适用于物理机安装，虚拟机安装请勿直接照搬
 
@@ -19,10 +19,10 @@ NOTE:本文适用于物理机安装，虚拟机安装请勿直接照搬
  + 良好的网络连接，有线网最佳
  + 一个1GB以上的USB存储器
  + 作死的心
- 
+
  在 [这里](https://www.archlinux.org/download/)  下载最新的镜像，并且将其刷入你的USB存储器中。  
  推荐使用[Rufus](https://www.archlinux.org/download/) 进行刷入。选择对应的USB设备和你下载好的ArchLinux镜像，Partrition Scheme选择GTP, Target System选择UEFI，其他选项保持默认。点击Start后会询问以何种模式刷入，选择DD Mode。
- 
+
 # 2 分区
 分区是个技术活，毕竟数据无价。  
 在进行下面的操作之前请务必将你宝贵的数据进行**备份！备份！备份！**  
@@ -39,8 +39,8 @@ swap         #交换分区      8GB
 ~~~
 至于仓库盘可以等系统安转好之后再手动挂载。
 >tips1:如果你认为你的物理内存足够充裕，那么你可以选择不使用交换分区<br>tips2：如果你拥有多块硬盘，可以考虑把根目录下常用的目录（如/home或者/usr）等单独在不同的硬盘上分配空间，可以提高系统的运行速度。当然，更好的方法是使用RAID。
-   
-     
+
+
 *...未完待续*
 
->![](https://pbs.twimg.com/media/DKucDZrVAAAPMDE.jpg:large) [illust: liduke](https://twitter.com/lidukelaya/status/912995296048590848) 
+>![](/assets/img/post/2018/12/DKucDZrVAAAPMDE.jpg) [illust: liduke](https://twitter.com/lidukelaya/status/912995296048590848)

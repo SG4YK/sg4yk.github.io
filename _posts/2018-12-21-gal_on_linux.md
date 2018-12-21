@@ -67,7 +67,7 @@ $ LANG="ja_JP.EUC-JP" wine someProgram.exe
 wine默认生成的是64位的Windows环境，对一些年代久远的Gal的支持可能并不好。你可以额外生成一个32位的prefix来运行32位应用。
 执行以下命令，将在生成一个新的prefix<code>~/.wine32</code>
 ~~~bash
-$ WINEARCH=win32 WINEPREFIX=~/.wine32 wineboot -u
+$ WINEARCH=win32 WINEPREFIX="~/.wine32" wineboot -u
 ~~~
 然后通过指定32位的prefix来运行
 ~~~bash

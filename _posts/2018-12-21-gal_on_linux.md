@@ -21,7 +21,7 @@ $ sudo pacman -S wine wine_gecko wine-mono
 $ winecfg
 ~~~
 会生成一个默认的虚拟Windows环境(prefix)，路径是<code>~/.wine</code>  
-你也可以在winefg里面对声音、图形等进行简单的设置，一般默认就好了。
+你也可以在winecfg里面对声音、图形等进行简单的设置，一般默认就好了。
 
 ## 2 配置Locale
 编辑<code>/etc/locale.gen</code>  
@@ -78,6 +78,7 @@ $ WINEPREFIX="~/.wine32" LANG="ja_JP" wine someProgram.exe
 
 # 4 后记
 没什么好记的，**祝大家身体健康**（逃
+![](/assets/img/post/2018/12/photo_2018-12-23.jpg)
 
 >![](/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg)
 [illust: 木しよ](https://twitter.com/Kishiyo1943/status/1076022984064679936)

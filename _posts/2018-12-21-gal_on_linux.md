@@ -4,7 +4,7 @@ title: '如何愉快地在Linux上推Gal'
 subtitle: '全平台社保！'
 date: 2018-12-21
 categories: 'Tech'
-tags: Gal Linux
+tags: ACG Linux
 cover: '/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg'
 ---
 众所周知由于Windows上蛋疼的编码问题，大多数情况下我们运行Galgame都需要使用ntleas或者LocaleEmulator等工具进行转区（不仅如此，有些情况下我打开别人给我的包含中文字符的txt文本都需要转区）。  

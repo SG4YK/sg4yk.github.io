@@ -42,5 +42,6 @@ swap         #交换分区      8GB
 
 
 *...未完待续*
+(期末太忙了，只能等放假更完它orz);
 
 >![](/assets/img/post/2018/12/DKucDZrVAAAPMDE.jpg) [illust: liduke](https://twitter.com/lidukelaya/status/912995296048590848)

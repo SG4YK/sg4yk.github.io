@@ -38,7 +38,11 @@ $ locale-gen
 然后重新启动你的电脑。
 >建议你可以安装一些日文字体，我个人比较喜欢的是Adobe和Google共同开发的[思源体](https://github.com/adobe-fonts/source-han-sans) 
 
-# 3 运行
+
+
+## 3 运行
+
+
 
 运行非常简单，只需要指定语言变量就行了。
 在Galgame所在的目录打开终端，运行以下命令(将someProgram.exe替换为对应的可执行文件）
@@ -76,9 +80,14 @@ $ WINEPREFIX="~/.wine32" LANG="ja_JP" wine someProgram.exe
 最後，你只需要制作一个快捷方式，就可以方便地<del style="color:#828282;" >开冲</del>启动你的Galgame。  
 >如果你的Gal能运行，但是部分字符显示不正常，通常的原因是wine缺少字体文件。此问题就不在本文的讨论范围了。
 
-# 4 后记
+
+
+## 4 后记
+
+
+
 没什么好记的，**祝大家身体健康**（逃
 ![](/assets/img/post/2018/12/photo_2018-12-23.jpg)
 
 >![](/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg)
-[illust: 木しよ](https://twitter.com/Kishiyo1943/status/1076022984064679936)
+[illust: 木shiyo](https://twitter.com/Kishiyo1943/status/1076022984064679936)

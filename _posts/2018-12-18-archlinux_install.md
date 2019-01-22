@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'ArchLinu Installation Guide'
+title: 'ArchLinux Installation Guide'
 subtitle: '更新中'
 date: 2019-01-23
 categories: 'Tech'

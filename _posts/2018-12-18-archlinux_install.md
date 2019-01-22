@@ -252,7 +252,7 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 $ pacman -S dialog wpa_supplicant netctl wireless_tools
 ~~~
 设置root密码
-~~~
+~~~bash
 $ passwd
 ~~~
 ctrl+D退出chroot环境，卸载分区

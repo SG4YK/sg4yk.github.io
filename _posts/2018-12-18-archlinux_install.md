@@ -215,7 +215,7 @@ $ nano /etc/locale.conf
 $ nano /etc/hostname
 ~~~
 输入你喜欢的hostname并且保存。
-注意hostname的合法性。（参考[这篇文章](https://blog.csdn.net/wanghuiict/article/details/70038140) )
+注意hostname的合法性。（参考[这篇文章](https://blog.csdn.net/wanghuiict/article/details/70038140) )  
 将hostname添加到hosts
 ~~~bash
 $ nano /etc/hosts

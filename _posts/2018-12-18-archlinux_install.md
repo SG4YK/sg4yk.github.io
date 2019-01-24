@@ -60,6 +60,7 @@ DiskGenius的分区操作十分简单，这里就不介绍了。
 + 按F10保存BIOS设置并且重启。
 然后你会看到以下引导画面，选择第一项即可
 ![](/assets/img/post/2019/01/Screenshot_20190123_004604.png )  
+
 进入系统后，首先同步时间
 ~~~bash
 $ timedatectl set-ntp true

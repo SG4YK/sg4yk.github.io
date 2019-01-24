@@ -13,6 +13,8 @@ cover: '/assets/img/post/2018/12/DKucDZrVAAAPMDE.jpg'
 如果你按照本文在安装时遇到问题，请首先阅读[ArchWiki](https://wiki.archlinux.org/) 。它比你想象中还要强大。
 本文在于~~<del style="color: #b6b6b6">为了让这个什么都没有的博客看起来没那么空虚</del>~~提供一篇~~<del style="color: #b6b6b6">费话连篇</del>~~简单易懂的中文教程，帮助小白也能顺利装上ArchLinux以及解决一些安装后可能出现的问题。  
 
+<p style="text-align:center;font-size:20px;"><b>执行任何命令之前务必检查一遍<br/>切忌无脑复制</b></p>
+
 
 	
 # 1 准备阶段
@@ -163,10 +165,8 @@ $ nano /etc/pacman.d/mirrorlist
 ~~~
 ctrl+W,搜索<code>tsinghua</code>
 ![](/assets/img/post/2019/01/Screenshot_20190123_012611.png )
-将光标移动至<code >Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</code>这一行，按下ctrl+K剪切，回到文档顶端按下ctrl+U粘贴。
-Screenshot_20190123_025032
-按ctrl+O和Enter保存文件，ctrl+X退出编辑。
-然后同步你镜像源
+将光标移动至<code >Server = http://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</code>这一行，ctrl+K剪切，回到文档顶端ctrl+U粘贴。ctrl+O和Enter保存文件，ctrl+X退出编辑。  
+然后同步镜像源
 ~~~bash
 $ pacman -Syy
 ~~~

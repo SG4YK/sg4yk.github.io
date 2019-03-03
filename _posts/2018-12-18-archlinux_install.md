@@ -180,7 +180,11 @@ $ pacstrap /mnt base base-devel
 ~~~bash
 $ genfstab -U /mnt >> /mnt/etc/fstab
 ~~~
-生成fstab文件。
+生成fstab文件。  
+进入chroot环境  
+~~~bash
+$ arch-chroot /mnt
+~~~
 
 ### 3.7 时间与地区
 设置时区

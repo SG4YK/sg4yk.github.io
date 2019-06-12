@@ -2,7 +2,7 @@
 layout: post
 title: '如何愉快地在Linux上推Gal'
 subtitle: '全平台社保！'
-date: 2018-12-21
+date: 2019-06-13
 categories: 'Tech'
 tags: ACG Linux
 cover: '/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg'
@@ -26,6 +26,7 @@ $ winecfg
 ## 2 配置Locale
 编辑<code>/etc/locale.gen</code>  
 找到ja_JP,并且去掉注释
+
 ~~~text
 ja_JP.EUC-JP EUC-JP
 ja_JP.UTF-8 UTF-8
@@ -46,6 +47,7 @@ $ locale-gen
 
 运行非常简单，只需要指定语言变量就行了。
 在Galgame所在的目录打开终端，运行以下命令(将someProgram.exe替换为对应的可执行文件）
+
 ~~~bash
 $ LANG="ja_JP" wine someProgram.exe
 ~~~
@@ -55,11 +57,12 @@ $ LANG="ja_JP" optirun wine CM3D2x64.exe
 ~~~
 稍等片刻，你就能看到熟悉的帝国俱乐部了。（而且加载比用Windows还快。。。）
 ![](/assets/img/post/2018/12/scrsht_cm3d2.png) 
->发现一个BUG就是CM3D2的MOD和汉化等插件无法在Linux下使用，经过初步的排查是因为opengl32.dll造成的，wine会默认使用自己的opengl32.dll而不是prefix的那一份，所以游戏目录下面的opengl32.dll根本不起作用。
-我尝试让wine强制使用prefix中的或者是游戏目录下的opengl32.dll,结果就是开不了游戏。不过我觉得也不算是特别要命的bug了。
+>发现一个BUG就是CM3D2的MOD和汉化等插件无法在Linux下使用，经过初步的排查是因为opengl32.dll造成的，wine会默认使用自己的opengl32.dll而不是prefix的那一份，所以游戏目录下面的opengl32.dll不起作用。
+尝试让wine强制使用prefix中的或者是游戏目录下的opengl32.dll,结果就是开不了游戏。不过我觉得也不算是特别要命的bug了。
 
 如果你发现指定了语言变量之后也不能运行游戏，你可以尝试额外指定编码  
 比如
+
 ~~~bash
 $ LANG="ja_JP.UTF-8" wine someProgram.exe
 ~~~
@@ -70,6 +73,7 @@ $ LANG="ja_JP.EUC-JP" wine someProgram.exe
 
 wine默认生成的是64位的Windows环境，对一些年代久远的Gal的支持可能并不好。你可以额外生成一个32位的prefix来运行32位应用。
 执行以下命令，将在生成一个新的prefix<code>~/.wine32</code>
+
 ~~~bash
 $ WINEARCH=win32 WINEPREFIX="~/.wine32" wineboot -u
 ~~~
@@ -84,9 +88,18 @@ $ WINEPREFIX="~/.wine32" LANG="ja_JP" wine someProgram.exe
 
 ## 4 后记
 
+对于某些汉化后的Galgame，如果遇到在<code>LANG="ja_JP"</code>下无法运行的状态，可以在第2步中加入中文locale,常用的字符集有UTF-8以及GBK。  
 
+一般来说，如果不确定到底该用哪一个语言变量来运行wine,可以在以下四个里面逐个尝试
 
-没什么好记的，**祝大家身体健康**（逃
++ ja_JP.UTF-8
++ ja_JP.EUC-JP
++ zh_CN.UTF-8
++ zh_CN.GBK   
+
+如果遇到报错中有libmpg123的字样，安装[mpg123](<https://www.archlinux.org/packages/extra/x86_64/mpg123/>)即可，大部分的Galgame都需要mpg123才能运行。
+
+**祝大家身体健康**（逃
 ![](/assets/img/post/2018/12/photo_2018-12-23.jpg)
 
 >![](/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg)

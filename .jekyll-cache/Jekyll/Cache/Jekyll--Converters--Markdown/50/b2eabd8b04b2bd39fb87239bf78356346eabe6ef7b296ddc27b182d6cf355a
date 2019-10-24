@@ -1,0 +1,92 @@
+I"Q<p>众所周知由于Windows上蛋疼的编码问题，大多数情况下我们运行Galgame都需要使用ntleas或者LocaleEmulator等工具进行转区（不仅如此，有些情况下我打开别人给我的包含中文字符的txt文本都需要转区）。<br />
+当我投入了ArchLinux的怀抱以后，即使能用wine来运行Windows应用，但转区就成为了一个头痛的问题。对于64位应用，即使比较麻烦，但还是可以通过手动打开ntleasWin.exe来转区；32位应用你只能用LocaleEmulator进行转区，然而LE转区是要通过Windows的右键菜单来启动对应的程序的，显然这行不通。<br />
+<del style="color:#828282;">为了手冲就要重启的麻烦事我是忍不了的，</del>于是就有了下面的教程。</p>
+
+<h2 id="1-安装wine">1 安装wine</h2>
+<p>在控制台执行</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>pacman <span class="nt">-S</span> wine wine_gecko wine-mono
+</code></pre></div></div>
+<p>安装完成之后，执行</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>winecfg
+</code></pre></div></div>
+<p>会生成一个默认的虚拟Windows环境(prefix)，路径是<code>~/.wine</code><br />
+你也可以在winecfg里面对声音、图形等进行简单的设置，一般默认就好了。</p>
+
+<h2 id="2-配置locale">2 配置Locale</h2>
+<p>编辑<code>/etc/locale.gen</code><br />
+找到ja_JP,并且去掉注释</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ja_JP.EUC-JP EUC-JP
+ja_JP.UTF-8 UTF-8
+</code></pre></div></div>
+<p>保存文件<br />
+然后在控制台执行以下命令来更新你的locale</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>locale-gen
+</code></pre></div></div>
+<p>然后重新启动你的电脑。</p>
+<blockquote>
+  <p>建议你可以安装一些日文字体，我个人比较喜欢的是Adobe和Google共同开发的<a href="https://github.com/adobe-fonts/source-han-sans">思源体</a></p>
+</blockquote>
+
+<h2 id="3-运行">3 运行</h2>
+
+<p>运行非常简单，只需要指定语言变量就行了。
+在Galgame所在的目录打开终端，运行以下命令(将someProgram.exe替换为对应的可执行文件）</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ LANG</span><span class="o">=</span><span class="s2">"ja_JP"</span> wine someProgram.exe
+</code></pre></div></div>
+<p>对于显卡配置要求较高的Gal,你还可以配合optirun来食用。比如CM3D2</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ LANG</span><span class="o">=</span><span class="s2">"ja_JP"</span> optirun wine CM3D2x64.exe
+</code></pre></div></div>
+<p>稍等片刻，你就能看到熟悉的帝国俱乐部了。（而且加载比用Windows还快。。。）
+<img src="/assets/img/post/2018/12/scrsht_cm3d2.png" alt="" /></p>
+<blockquote>
+  <p>发现一个BUG就是CM3D2的MOD和汉化等插件无法在Linux下使用，经过初步的排查是因为opengl32.dll造成的，wine会默认使用自己的opengl32.dll而不是prefix的那一份，所以游戏目录下面的opengl32.dll不起作用。
+尝试让wine强制使用prefix中的或者是游戏目录下的opengl32.dll,结果就是开不了游戏。不过我觉得也不算是特别要命的bug了。</p>
+</blockquote>
+
+<p>如果你发现指定了语言变量之后也不能运行游戏，你可以尝试额外指定编码<br />
+比如</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ LANG</span><span class="o">=</span><span class="s2">"ja_JP.UTF-8"</span> wine someProgram.exe
+</code></pre></div></div>
+<p>或者是</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ LANG</span><span class="o">=</span><span class="s2">"ja_JP.EUC-JP"</span> wine someProgram.exe
+</code></pre></div></div>
+
+<p>wine默认生成的是64位的Windows环境，对一些年代久远的Gal的支持可能并不好。你可以额外生成一个32位的prefix来运行32位应用。
+执行以下命令，将在生成一个新的prefix<code>~/.wine32</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ WINEARCH</span><span class="o">=</span>win32 <span class="nv">WINEPREFIX</span><span class="o">=</span><span class="s2">"~/.wine32"</span> wineboot <span class="nt">-u</span>
+</code></pre></div></div>
+<p>然后通过指定32位的prefix来运行</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ WINEPREFIX</span><span class="o">=</span><span class="s2">"~/.wine32"</span> <span class="nv">LANG</span><span class="o">=</span><span class="s2">"ja_JP"</span> wine someProgram.exe
+</code></pre></div></div>
+<p>最後，你只需要制作一个快捷方式，就可以方便地<del style="color:#828282;">开冲</del>启动你的Galgame。</p>
+<blockquote>
+  <p>如果你的Gal能运行，但是部分字符显示不正常，通常的原因是wine缺少字体文件。此问题就不在本文的讨论范围了。</p>
+</blockquote>
+
+<h2 id="4-后记">4 后记</h2>
+
+<p>对于某些汉化后的Galgame，如果遇到在<code>LANG="ja_JP"</code>下无法运行的状态，可以在第2步中加入中文locale,常用的字符集有UTF-8以及GBK。</p>
+
+<p>一般来说，如果不确定到底该用哪一个语言变量来运行wine,可以在以下四个里面逐个尝试</p>
+
+<ul>
+  <li>ja_JP.UTF-8</li>
+  <li>ja_JP.EUC-JP</li>
+  <li>zh_CN.UTF-8</li>
+  <li>zh_CN.GBK</li>
+</ul>
+
+<p>如果遇到报错中有libmpg123的字样，安装<a href="https://www.archlinux.org/packages/extra/x86_64/mpg123/">mpg123</a>即可，大部分的Galgame都需要mpg123才能运行。</p>
+
+<p><strong>祝大家身体健康</strong>（逃
+<img src="/assets/img/post/2018/12/photo_2018-12-23.jpg" alt="" /></p>
+
+<blockquote>
+  <p><img src="/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg" alt="" />
+<a href="https://twitter.com/Kishiyo1943/status/1076022984064679936">illust: 木shiyo</a></p>
+</blockquote>
+:ET

@@ -1,0 +1,97 @@
+I"<h2 id="level1">Level1</h2>
+<p><img src="/assets/img/post/2019/10/1024_1.png" alt="" />
+<img src="/assets/img/post/2019/10/1024_11.png" alt="" />
+注意到用红色矩形标记出来的三处，将<code>&amp;#x51b2</code>从unicode转换为中文字符，得到 ‘冲’<br />
+<strong>flag</strong> <code>1024冲冲冲</code></p>
+
+<h2 id="level2">Level2</h2>
+<p><img src="/assets/img/post/2019/10/1024_2.png" alt="" />
+按F12检查网页代码
+<img src="/assets/img/post/2019/10/1024_21.png" alt="" />
+观察选中的一行处，得到下一关的地址<br />
+在浏览器中输入 <code>http://193.112.60.245:8080/shop/Hide_Level2/</code>  进入隐藏关数独 
+<img src="/assets/img/post/2019/10/1024_22.png" alt="" />
+<strong>flag</strong> <code>192478653</code></p>
+
+<h2 id="level3">Level3</h2>
+<p><img src="/assets/img/post/2019/10/1024_3.png" alt="" />
+类似鱼FlappyBird的游戏<br />
+死亡多次后即可获得flag<br />
+<img src="/assets/img/post/2019/10/1024_31.png" alt="" />
+<strong>flag</strong> <code>2048</code></p>
+
+<h2 id="level4">Level4</h2>
+<p><img src="/assets/img/post/2019/10/1024_4.png" alt="" />
+非常简单的程序题，不用考虑超时问题，直接暴力枚举即可<br />
+Java示例代码</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1009</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1024</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">if</span><span class="o">(</span><span class="n">match</span><span class="o">(++</span><span class="n">i</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">n</span><span class="o">++;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">match</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><strong>flag</strong>  <code>9649</code></p>
+
+<h2 id="level5">Level5</h2>
+<p><img src="/assets/img/post/2019/10/1024_5.png" alt="" />
+输入框及提交按钮被隐藏，按F12检查网页代码
+<img src="/assets/img/post/2019/10/1024_51.png" alt="" />
+将<code>style="visibility:hidden"</code>删除，显示输入框与提交按钮
+<img src="/assets/img/post/2019/10/1024_52.png" alt="" />
+检查网页的js,发现flag被转化为摩斯密码<br />
+将<code>-. --- -....- . .-. .-. --- .-. 转换为文字得到flag  
+**flag** <code>NO ERROR</code></code></p>
+
+<h2 id="level6">Level6</h2>
+<p><img src="/assets/img/post/2019/10/1024_6.png" alt="" />
+检查网页代码，提示打开 http://www.atool9.com/steganography.php<br />
+发现是图片隐写工具。<br />
+将图片上传并解密，得到<code>&#115;&#100;&#108;&#116;&#113;&#108;</code><br />
+转化为ascii得到flag<br />
+<strong>flag</strong>  <code>sdltql</code></p>
+
+<h2 id="level7">Level7</h2>
+<p><img src="/assets/img/post/2019/10/1024_7.png" alt="" />
+转到如图所示的repo
+<img src="/assets/img/post/2019/10/1024_71.png" alt="" /><br />
+<img src="/assets/img/post/2019/10/1024_72.png" alt="" />
+并在issue中找到文件的下载地址，选择对应的platform下载（以Linux为例） 
+<img src="/assets/img/post/2019/10/1024_73.png" alt="" />
+解压后得到一个可执行程序和一个js文件 <br />
+<img src="/assets/img/post/2019/10/1024_74.png" alt="" />
+直接查看render.js ，观察数组a，找到上图内容 <br />
+<img src="/assets/img/post/2019/10/1024_75.png" alt="" />
+在<code>say()</code>和&lt;/code&gt;ask()&lt;/code&gt;内发现一个长度为11的数组key<br />
+将<code>key[1],key[0],key[2],key[4]</code>拼接，得<code>56AB24C15B72A457069C5EA42FCFC640</code><br />
+直接提交，显示错误<br />
+继续查看render.js<br />
+<img src="/assets/img/post/2019/10/1024_75.png" alt="" />
+提示flag为md5<br />
+将<code>56AB24C15B72A457069C5EA42FCFC640</code>使用md5解密工具进行解密，得到<code>happy</code>, 提交成功。<br />
+<strong>flag</strong> <code>happy</code></p>
+
+<p><strong>祝大家身体健康</strong>（逃
+<img src="/assets/img/post/2018/12/photo_2018-12-23.jpg" alt="" /></p>
+
+<!-- >![](/assets/img/post/2018/12/Du7M0RnU0AA33t5.jpg)
+[illust: 木shiyo](https://twitter.com/Kishiyo1943/status/1076022984064679936) -->
+:ET

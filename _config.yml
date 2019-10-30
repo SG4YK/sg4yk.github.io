@@ -55,6 +55,7 @@ postPatterns: ''
 sns:
   github: '//github.com/sg4yk'
   email: 'mailto:sg4yk@outlook.com'
+  twitter: '//twitter.com/sg4yk_'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar

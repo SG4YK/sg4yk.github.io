@@ -1,7 +1,0 @@
-I"L<h2 id="level1">Level1</h2>
-<p><img src="/assets/img/post/2019/10/1024_1.png" alt="" />
-<img src="/assets/img/post/2019/10/1024_11.png" alt="" />
-注意到用红色矩形标记出来的三处，将<code>&amp;#x51B2</code>从unicode转换为中文字符，得到 ‘冲’<br />
-<strong>flag</strong> <code>1024冲冲冲</code></p>
-
-:ET

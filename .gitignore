@@ -7,3 +7,4 @@ _site
 .directory
 .vscode
 backup
+.jekyll-cache

@@ -209,11 +209,11 @@ public class InputTest : MonoBehaviour
 ~~~  
 
 运行程序，即可获得类似文章开头展示的效果。  
-工程文件的源代码已上传至GitHub  
-https://github.com/SG4YK/DS4Motion_Unity  
+工程文件的源代码已上传至GitHub
+[项目地址](https://github.com/SG4YK/DS4Motion_Unity)  
 
 # 后记
-这篇文章原本是我发布在UnityConnect上的（[链接](https://unity.cn/projects/zai-unityzhong-huo-qu-dualshcok4de-dong-zuo-shu-ju-tuo-luo-yi-yu-jia-su-ji)），后来稍加修改搬运到这里。说实话个人感觉UnityConnect这平台使用体验还是不太好的，网页和app都的速度和流畅程度都不够理想，特别是UnityConnect最近单独开了个中国版，许多功能都阉割了，甚至在我写的文章页面上连我的ID和头像都没发正常显示 = =  
+这篇文章原本是我发布在UnityConnect上的（[链接](https://unity.cn/projects/zai-unityzhong-huo-qu-dualshcok4de-dong-zuo-shu-ju-tuo-luo-yi-yu-jia-su-ji)），后来稍加修改搬运到这里。说实话个人感觉UnityConnect这平台使用体验还是不太好的，网页和app都的速度和流畅程度都不够理想，特别是UnityConnect最近单独开了个中国版，许多功能都阉割了，甚至在我写的文章页面上连我的ID和头像都没法正常显示...  
 不过UnityConnect上还是有很多干货的，而且在二月份的时候，大家都因为众所周知的原因不能出门，UnityChina官方每一天都进行了直播来分享技术和idea。希望这个社区能变得越来越好。  
 最近还是决定了以后走游戏开发的方向(flag ，所以也开始写相关的post来记录自己学习（秃头）的过程，tech和art结合在一起产生的化学反应真的非常exciting。  
 想着毕业之前能做出一个像模像样的作品来，但是一个人的精力终究还是有限的，我在美术创作的方面的水平又是真的菜，所以如果有同学想做点什么有趣的玩意（非商业项目，至少不以盈利为唯一目的）又缺程序的话可以考虑发邮件联系我。  

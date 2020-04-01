@@ -1,4 +1,4 @@
-I"�<h2 id="level1">Level1</h2>
+I"�<h2 id="level1">Level1</h2>
 <p><img src="/assets/img/post/2019/10/1024_1.png" alt="" />
 <img src="/assets/img/post/2019/10/1024_11.png" alt="" />
 注意到用红色矩形标记出来的三处，将<code>&amp;#x51B2</code>从unicode转换为中文字符，得到 ‘冲’<br />
@@ -28,7 +28,7 @@ Java示例代码</p>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1009</span><span class="o">;</span>
         <span class="k">while</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1024</span><span class="o">)</span> <span class="o">{</span>
@@ -36,7 +36,7 @@ Java示例代码</p>
                 <span class="n">n</span><span class="o">++;</span>
             <span class="o">}</span>
         <span class="o">}</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">match</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>

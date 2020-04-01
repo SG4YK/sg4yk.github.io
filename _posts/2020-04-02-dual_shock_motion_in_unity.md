@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '在Unity中获取DualShock4的动作数据（陀螺仪与加速计）'
-subtitle: ' '
+subtitle: '整点好玩的'
 date: 2020-04-02
 categories: 'Tech'
 tags: Unity
@@ -34,7 +34,7 @@ Input System中一个非常强大的功能就是支持自定义输入设备布�
 
 ![](/assets/img/post/2020/04/custom_layout.png)
 
-观察Controls下的每一项，对照 http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure 提供的report structure，我们要映射的布局应该有如下结构。  
+观察Controls下的每一项，对照 [eleccelerator wiki](http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure) 提供的report structure，我们要映射的布局应该有如下结构。  
 
 ![](/assets/img/post/2020/04/example.png)  
 

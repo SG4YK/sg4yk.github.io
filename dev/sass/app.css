@@ -116,7 +116,7 @@ a {
   .g-header .nav-default a:hover {
     color: #1494FB !important; }
   .g-header .nav-pink a:hover {
-    color: #FC6794 !important; }
+    color: #EEA9A9 !important; }
 
 .headerUp {
   top: -65px; }
@@ -169,7 +169,7 @@ a {
   background-color: #1494FB; }
 
 .themeColor-pink {
-  background-color: #FC6794; }
+  background-color: #EEA9A9; }
 
 .home-content {
   margin: 40px auto 60px; }
@@ -308,7 +308,7 @@ a {
       .author-card .sns-links li .icon-facebook:hover {
         color: #3D5A9A; }
       .author-card .sns-links li .icon-dribbble:hover {
-        color: #F26798; }
+        color: #EEA9A9; }
       .author-card .sns-links li .icon-jianshu:hover {
         color: #EA6F5A; }
       .author-card .sns-links li .icon-uicn:hover {
@@ -567,7 +567,7 @@ a {
   background-color: #1494FB; }
 
 .bgcolor-pink {
-  background-color: #FC6794; }
+  background-color: #EEA9A9; }
 
 .post-no-cover {
   height: 360px; }

@@ -209,7 +209,7 @@ a {
 }
 
 .g-header .nav-pink a:hover {
-    color: #FC6794 !important;
+    color: #EEA9A9 !important;
 }
 
 .headerUp {
@@ -277,7 +277,7 @@ a {
 }
 
 .themeColor-pink {
-    background-color: #FC6794;
+    background-color: #EEA9A9;
 }
 
 .home-content {
@@ -863,7 +863,7 @@ a {
 }
 
 .bgcolor-pink {
-    background-color: #FC6794;
+    background-color: #EEA9A9;
 }
 
 .post-no-cover {
@@ -1077,9 +1077,10 @@ a {
 
 .tags-banner h2 {
     font-size: 35px;
-    font-family: "SourceSansPro-ExtraLight";
+    font-family: "SourceSansPro";
     font-weight: normal;
     line-height: 300px;
+    
 }
 
 .tags-content {

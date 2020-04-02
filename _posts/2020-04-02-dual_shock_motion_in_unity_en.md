@@ -36,7 +36,7 @@ There're 2 ways to create a custom layout, using struct or JSON. In this tutoria
 
 First you gonna copy the default layout so that you don't have to bind all the other buttons yourself.  
 Open Input Debug -> Layouts -> Specific Devices -> Gamepads -> PS4 Controller then right click, select Copy Layout as JSON and paste into a new JSON file created by yourself.  
-I suggest you modifying the `name` and the `displayName` so that it can be differed from the default one.  
+I suggest you modifying `name` and `displayName` so that it can be differed from the default one.  
 
 ![](/assets/img/post/2020/04/custom_layout.png)
 
@@ -47,9 +47,9 @@ Go through every item under `control`, and referring to the report structure pro
 Well, some of you may be confused that why the `layout` field should be `Button` rather than something like `Axis`. In general a real button has only 2 status, released and pressed, representing 0 and 1 as value.
 For an axis, it should be a 1D vector ranged from -1 to 1, or 0 to 1.  
 Well, if you look into the default layout you could see that in fact there is no basic layout called `axis`. For instance the `Stick` layout for your L and R stick, which can return an 2D vector, is actually a combination of 4 `Button` layout.  
-What actually differs a real button from an real axis is the `format` field. A real button's `format` should be `BIT` while a axis is `BYTE`.  
+What actually differs a real button from an real axis is the `format` field. A real button's `format` should be `BIT` while an axis is `BYTE`.  
 The data returned from a stick and a gyroscope should be similar, the only difference is that a gyroscope has one more axis. So, for every axis of the gyroscope or the accelerometer, just copy a button layout under L or R stick, delete unused fields, modify the offset, and that's it.  
-There're totally 6 axis for 2 sensors, and if you've read the report structure I mentioned, you'll know that there're 2 possible offset for every axis. For convenience I add all 12 offsets(from 13 to 24) at once and decide which to user later.  
+There're totally 6 axis for 2 sensors, and if you've read the report structure I mentioned, you'll know that there're 2 possible offsets for every axis. For convenience I add all 12 offsets(from 13 to 24) at once and decide which to user later.  
 
 # Obtain Data
 
@@ -114,10 +114,10 @@ Since the data of every axis of the gyroscope may be located in 2 different offs
 Analyze the data and I got these features for every axis's data:
 
 + The value ranged from 0 to 1.   
-+ 0 or 1 means still, 0.5 to 1 means rotating forward and 0 to 0.5 means ratating backwards.
++ 0 or 1 means still, 0.5 to 1 means rotating forward and 0 to 0.5 means rotating backwards.
 + The value becomes closer to 0.5 if the controller is rotating faster(no matter forward or backwards).  
 
-Modify `DS4.cs` like this. Notice that DualShock4 uses different coordinate from Unity so the data of Z axis should multiply by -1.  
+Modify `DS4.cs`, notice that DualShock4 uses different coordinate from Unity so the data of Z axis should multiply by -1.  
 
 
 ~~~csharp

@@ -79,7 +79,7 @@ public class DS4
         return ds4;
     }
 }
-~~~  
+~~~
 
 Call `DS4.getController()` and the layout in `customLayout.json` will be read and applied to your current controller.  
 To test if the Input System works correctly, let's create a cube object and attach a script to it.  
@@ -99,14 +99,14 @@ public class InputTest : MonoBehaviour
         this.controller = DS4.getConroller();
     }
 }
-~~~  
+~~~
 
 Run your program and double click DualShock4GamepadHID. In the new windows you should be able to see all the new controls from offset 13 to 24 and the values changing when you rotate your controller in the real world.  
 
 ![](/assets/img/post/2020/04/data_input.png)
 
 
-# DemoGet motion sensors' data of DualShock 4 using the new Input System
+# Demo
 
 In the previous step you get the raw data of the 2 sensors, now I'm gonna show you a demo for how to deal with the data, let's take the gyroscope(offset 13 to 18) for example.
 
@@ -170,7 +170,7 @@ public class DS4
         return data > 0.5 ? 1 - data : -data;
     }
 }
-~~~  
+~~~
 Call `getRotation()` in your code and you can get the rotation speed of your controller represented in a quaternion.  
 
 Modify `InputTest.cs` as well, so that the cube can rotate as the controller does.  
@@ -216,7 +216,7 @@ public class InputTest : MonoBehaviour
         }
     }
 }
-~~~  
+~~~
 
 Now run your program and rotate your controller, you should be able to see your cube rotating just like the GIF the beginning of this tutorial shows.  
 You can get all the codes In this tutorial from my 
@@ -226,5 +226,6 @@ Thank you for reading this article and don't forget to comment below if you find
 ([Header photo by Alvaro Reyes on Unsplash](https://unsplash.com/photos/n1RZNBcsQ24))
 
 **Reference**
-+ http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure  
-+ https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/
+
++ [http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure](http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure)
++ [https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/)

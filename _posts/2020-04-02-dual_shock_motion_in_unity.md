@@ -5,7 +5,7 @@ subtitle: '整点好玩的'
 date: 2020-04-02
 categories: 'Tech'
 tags: Unity
-cover: '/assets/img/post/2020/04/header.jpg'
+cover: '/assets/img/post/2020/04/header2.jpg'
 ---
 
 # 前言
@@ -219,8 +219,8 @@ public class InputTest : MonoBehaviour
 想着毕业之前能做出一个像模像样的作品来，但是一个人的精力终究还是有限的，我在美术创作的方面的水平又是真的菜，所以如果有同学想做点什么有趣的玩意（非商业项目，至少不以盈利为唯一目的）又缺程序的话可以考虑发邮件联系我。  
 就写到这里，拜拜
 
->![](/assets/img/post/2020/04/header.jpg)
-[Photo by Alvaro Reyes on Unsplash](https://unsplash.com/photos/n1RZNBcsQ24)
+>![](/assets/img/post/2020/04/header2.jpg)
+[Photo by Fabian Albert on Unsplash](https://unsplash.com/photos/PGw2VbdSono)
 
 **参考链接**
 + http://eleccelerator.com/wiki/index.php?title=DualShock_4#Report_Structure  

@@ -108,12 +108,12 @@ Run your program and double click DualShock4GamepadHID. In the new windows you s
 
 # Demo
 
-In the previous step you get the raw data of the 2 sensors, now I'm gonna show you a demo for how to deal with the data, let's take the gyroscope(offset 13 to 18) for example.
+In the previous step you get the readings from the 2 sensors, now I'm gonna show you a demo for how to deal with the data, let's take the gyroscope(offset 13 to 18) for example.
 
-Since the data of every axis of the gyroscope may be located in 2 different offsets, when the controller is still, I could read stable values from offset 14, 16, 18 while the other 3 keep flickering, so I would choose 14, 16 and 18 as the input data. Since I don't have any official documentation from Sony, by the time I wrote this I couldn't figure out what the data of 3 other offset actually means. Feel free to comment if you have any idea about that.  
+Since the data of every axis of the gyroscope may be located in 2 different offsets, when the controller is still, I could read stable readings from offset 14, 16, 18 while the other 3 keep flickering(), so I would choose 14, 16 and 18 as the input data. Since I don't have any official documentation from Sony, by the time I wrote this I couldn't figure out what the data of 3 other offset actually means(UPDATE: it should be the unfiltered raw data). 
 Analyze the data and I got these features for every axis's data:
 
-+ The value ranged from 0 to 1.   
++ The value ranged from 0 to 1.  
 + 0 or 1 means still, 0.5 to 1 means rotating forward and 0 to 0.5 means rotating backwards.
 + The value becomes closer to 0.5 if the controller is rotating faster(no matter forward or backwards).  
 

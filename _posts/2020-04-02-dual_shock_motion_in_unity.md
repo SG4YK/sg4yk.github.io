@@ -78,7 +78,6 @@ public class DS4
 手动调用`DS4.getController()`会从`customLayout.json`读取布局并且配置到当前的手柄上。  
 建立一个Cube物体并写一个MonoBehavior来测试一下效果。  
 
-
 ~~~csharp
 //InputTest.cs
 using System.Collections;
@@ -104,7 +103,7 @@ public class InputTest : MonoBehaviour
 # demo
 到上一步为止，已经可以成功获取两个传感器的raw data了，接下来将展示一个简单的demo，以演示如何将数据应用在程序中，以陀螺仪数据（offset13至offset18）为例。
 
-由于陀螺仪各个轴的数据都对应了两个offset，在DualShock4静止不动时，offset 14、16、18可以获得较为稳定的数据，其他三个offset则就有（原因不明？）的持续抖动，因此选择14、16、18作为最终的输入。通过对数据观察，总结出每个轴的数据具有以下特征：
+由于陀螺仪各个轴的数据都对应了两个offset，在DualShock4静止不动时，offset 14、16、18可以获得较为稳定的数据，其他三个offset则就有持续抖动(这部分应该是没有进行滤波的原始数值)，因此选择14、16、18作为最终的输入。通过对数据观察，总结出每个轴的数据具有以下特征：
 
 - 数值在0到1之间  
 - 0或1表示静止，0~0.5是负方向，0.5~1是正方向  
@@ -165,6 +164,7 @@ public class DS4
 ~~~  
 
 修改`InputTest.cs`,以控制Cube跟随手柄转动。
+
 ~~~csharp
 //InputTest.cs
 using System;
@@ -212,12 +212,12 @@ public class InputTest : MonoBehaviour
 工程文件的源代码已上传至GitHub
 [项目地址](https://github.com/SG4YK/DS4Motion_Unity)  
 
-# 后记
+<!-- # 后记
 这篇文章原本是我发布在UnityConnect上的（[链接](https://unity.cn/projects/zai-unityzhong-huo-qu-dualshcok4de-dong-zuo-shu-ju-tuo-luo-yi-yu-jia-su-ji)），后来稍加修改搬运到这里。说实话个人感觉UnityConnect这平台使用体验还是不太好的，网页和app都的速度和流畅程度都不够理想，特别是UnityConnect最近单独开了个中国版，许多功能都阉割了，甚至在我写的文章页面上连我的ID和头像都没法正常显示...  
 不过UnityConnect上还是有很多干货的，而且在二月份的时候，大家都因为众所周知的原因不能出门，UnityChina官方每一天都进行了直播来分享技术和idea。希望这个社区能变得越来越好。  
 最近还是决定了以后走游戏开发的方向(flag ，所以也开始写相关的post来记录自己学习（秃头）的过程，tech和art结合在一起产生的化学反应真的非常exciting。  
 想着毕业之前能做出一个像模像样的作品来，但是一个人的精力终究还是有限的，我在美术创作的方面的水平又是真的菜，所以如果有同学想做点什么有趣的玩意（非商业项目，至少不以盈利为唯一目的）又缺程序的话可以考虑发邮件联系我。  
-就写到这里，拜拜
+就写到这里，拜拜 -->
 
 >![](/assets/img/post/2020/04/header2.jpg)
 [Photo by Fabian Albert on Unsplash](https://unsplash.com/photos/PGw2VbdSono)

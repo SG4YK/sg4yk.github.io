@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: '垃圾佬宿舍组网日记[01]：前言'
 subtitle: '校园网，甘霖娘 :)'
@@ -101,4 +101,4 @@ cover: '/assets/img/post/2019/11/67556060_p0.jpg'
 # 记得去买~~不要钱~~的XGPU噢！ 
 
 >![](/assets/img/post/2019/11/67556060_p0.jpg)
-[illust: YD](https://www.pixiv.net/artworks/67556060)
+[illust: YD](https://www.pixiv.net/artworks/67556060) -->

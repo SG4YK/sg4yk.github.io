@@ -11,7 +11,8 @@ cover: '/assets/img/post/2020/04/header2.jpg'
 # 前言
 
 先上效果
-![](/assets/img/post/2020/04/b8b3f314-27b1-4e88-9dae-ddc7cae06852_DS4.gif)
+![demo.gif](/assets/img/post/2020/04/b8b3f314-27b1-4e88-9dae-ddc7cae06852_DS4.gif)
+（如果你看不到上面的动图，你可以在[这里](https://github.com/SG4YK/DS4Motion_Unity/blob/master/demo.mp4)下载演示视频）
 
 一直以来，Unity官方并没有提供开箱即用的工具来方便地获取DualShock4中陀螺仪和加速计的数据（听说只有PS4的SDK有提供），要手动获取可能也避免不了和偏底层的代码打交道。直到Unity发布了新的输入工具，the new Input System（以下简称Input System，没有了解过的朋友可以看[这里](https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/)）。  
 Input System中一个非常强大的功能就是支持自定义输入设备布局，这使得我们可以通过修改DualShock4的默认布局，使得原本不能直接访问的陀螺仪和加速计数据暴露出来。  

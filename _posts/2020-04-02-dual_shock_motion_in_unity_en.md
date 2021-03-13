@@ -10,7 +10,8 @@ cover: '/assets/img/post/2020/04/header.jpg'
 
 # Briefing
 
-![](/assets/img/post/2020/04/b8b3f314-27b1-4e88-9dae-ddc7cae06852_DS4.gif)  
+![](/assets/img/post/2020/04/b8b3f314-27b1-4e88-9dae-ddc7cae06852_DS4.gif)
+(or click [here](https://github.com/SG4YK/DS4Motion_Unity/blob/master/demo.mp4) for the DEMO video)  
 
 It's such a pity that Unity didn't provide any out-of-the-box feature to get motion data for DualShock4 (unless you have the PS4 SDK), and you may have to write some low-level code to achieve that.  
 Since Unity released the new Input System ([here](https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/)'s the introduction), it becomes easier to access the data you want.  
@@ -219,7 +220,7 @@ public class InputTest : MonoBehaviour
 ~~~
 
 Now run your program and rotate your controller, you should be able to see your cube rotating just like the GIF the beginning of this tutorial shows.  
-You can get all the codes In this tutorial from my 
+You can get all the code in this tutorial from my 
 [GitHub repo](https://github.com/SG4YK/DS4Motion_Unity).  
 Thank you for reading this article and don't forget to comment below if you find any mistake.
 

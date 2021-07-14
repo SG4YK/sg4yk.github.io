@@ -5,10 +5,8 @@ subtitle: '浅谈Protobuf编码'
 date: 2021-7-14
 categories: 'Tech'
 tags: 
-cover: '/assets/img/post/2021/07/da'
+cover: '/assets/img/post/2021/07/daria-shatova-BphuDA60if4-unsplash.jpg'
 ---
-
-# Protobuf encoding
 
 ## 0x00 Before you start
 
